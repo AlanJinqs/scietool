@@ -1,0 +1,46 @@
+<html>
+ <head> 
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous" type="text/javascript">
+</script> 
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous" type="text/javascript">
+</script> 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" type="text/css" /> 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous" type="text/javascript">
+</script> 
+  <title></title> 
+ </head> 
+ <body class="bg-light"> 
+  <div class="container"> 
+   <div class="py-5 text-center"> 
+    <h2> Find your teacher's info </h2> 
+    <p class="lead"> Last Update: Aug. 27th 2020 </p> 
+   </div> 
+   <div class="input-group"> 
+    <div class="input-group-prepend"> 
+     <span class="input-group-text">Initial, ID or Full Name</span> 
+    </div>
+    <input type="text" class="form-control" id="inp" required="" /> 
+    <button type="button" class="btn btn-primary" id="search">Search</button> 
+   </div> 
+   <center>
+   <div id="result"></div> 
+	</center>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous" type="text/javascript">
+</script> 
+  <script type="text/javascript">
+  let teacherList = [["8441","AAO","Aaron Owen"], ["8547","KEM","Kevin McCaustlin"], ["8528","LEM","Luke Matthias"], ["8022","NAZ","Nancy Zhu"], ["8118","ZOC","Zoe Chen"], ["8626","SUL","Sunday Liu"], ["8563","CSY","Clare Symons"], ["8592","DAC","David Carroll"], ["8624","KAM","Kaisar Marogi"], ["8623","SIT","Simon Thorniley"], ["8613","EDC","Eddie Caffrey"], ["8457","KCL","Karen Clancy"], ["8439","MID","Mike Dawick"], ["8590","JER","Jenny Ross"], ["8651","RUC","Ruth Cooper"], ["8652","EOM","Eoghann MacLeoid"], ["8653","SEP","Sean Patrick"], ["8654","STB","Steve Boyland"], ["8655","JAS","Jack Smith"], ["8672","ABG","Abi Graves"], ["8381","PHN","Philip Norton"], ["8646","JFO","Jane Ford"], ["8708","CUZ","Curtis Zimpfer"], ["8706","JOB","Jonathan Ben"], ["8445","RJJ","Richard Jozefek"], ["8556","MIJ","Michael Jin"], ["8032","HEL","Henry Liu"], ["8036","ANN","Annie Zhou"], ["8499","JJY","Jane Yang"], ["8034","APL","Alpha Liu"], ["8559","YVL","Yvette Liu"], ["8374","ESJ","Erickson Jones"], ["8468","DAN","Daniel Navarro"], ["8628","TIW","Tina Wang"], ["8629","STF","Steve Farley"], ["4009","NMO","Neil Mobsby"], ["8035","SUM","Summer Xia"], ["8656","BDE","Barbara Delprete"], ["8665","HAK","Hardeep Kaur"], ["8666","LIM","Liam Madden"], ["8685","TIF","Tifa Fu"], ["8667","TIK","Ting Kang"], ["8710","GDO","Gerry Docherty"], ["8566","JAH","Jamie Halpin"], ["8046","STW","Steven Wu"], ["8050","JAL","Jack Liu"], ["8589","LUL","Luna Liu"], ["8594","PJH","Paul Holt"], ["8510","ELL","Elaine Liu"], ["8090","ERX","Eric Xu"], ["8615","ANP","Angelina Prince"], ["8132","THM","Thomas Mootheril"], ["8659","SEM","Sean Mather"], ["8673","MIC","Michael Courtney"], ["8677","JOH","John Hoban"], ["8678","KLE","Kevin Lozowy"], ["8679","ANK","Andrew Konkov"], ["8675","JUJ","Jun Jang"], ["8704","COZ","Colin Zhao"], ["8705","FLZ","Flynn Zeng"], ["8632","JOM","John Marques"], ["8707","AIA","Ainur Aitimova"], ["8464","PAM","Paul Murray"], ["8561","MNO","Manoj Odungat"], ["8134","CIZ","Cindy Zhang"], ["8516","ROL","Robert Liu"], ["8251","MAC","Martin Cole"], ["8086","JEK","Jeff Kearns"], ["8543","JAB","Jerzy Bialacki"], ["8616","RIK","Richard Knights"], ["8135","KRH","Krista He"], ["8593","BRL","Brian Little"], ["8643","TOP","Tom Powell"], ["8644","MIB","Michael Bracewell"], ["8663","IAW","Ian Wesson"], ["8680","CHO","Charles Ochola"], ["8695","NIY","Nic Yang"], ["8577","ELC","Ellie Chen"], ["8098","BAS","Back Stroke "], ["8539","SOP","Sonia Peh"], ["8475","SEO","Sefe Okungbowa"], ["8642","PAO","Patrick O'Grady"], ["8682","JHA","Jamie Hardisty"], ["8639","BES","Bernice Shimray"], ["8694","RAQ","Ryan Qiu"], ["8081","CHT","Chloe Tan"], ["8790","DSY","Daisy Ding"], ["8452","MPR","Mark Preen"], ["8544","CHK","Chet Khatu"], ["8079","ALI","Allen Liu "], ["8618","CHG","Cheong Eyuen Mian"], ["8650","ANS","Andrew Stephens"], ["8662","NAS","Nathan Silitonga"], ["8670","HEV","Henk van Reenen"], ["8500","CHX","Cherry Xu"], ["8612","MDD","Delma Duddy"], ["8560","IFS","Issac Fu"], ["8649","TIY","Tim Young"], ["8410","TRH","Tracy Humphreys"], ["8120","CCZ","Clara Zhang"], ["8305","APR","April Peng"], ["8635","YUJ","Yu Jie"], ["8636","MIS","Kamana Mishra"], ["8551","RAZ","Razia Darvesh"], ["8627","LUC","Luke Connolly"], ["8645","SOM","Soheil Meskini"], ["8647","NAB","Nadine Brown"], ["8889","HS","Helen Swan"], ["8511","SHE","Sherry Lai"], ["8094","ALH","Alison Huang"], ["8565","LMH","Lisa Haitana"], ["8109","IRX","Iris Xie"], ["8487","FEL","Felix Lin"], ["8110","KAZ","Kathy Zhou"], ["8481","JOC","Jocelyn Chen"], ["8398","SHL","Sharon Li"], ["8482","JAW","Jamie Wang"], ["2627","VIJ","Vicky Jiang"], ["8634","KEL","Kelly Lan"], ["8671","MAA","Maria Acosta"], ["8693","NIN","Nina Ni"], ["8180","SAC","Sarah Cai"], ["8554","ALY","Alice Ye"], ["8112","LIZ","Lily Zhu"], ["8501","SYL","Shiny Liang"], ["8638","JEO","Jenny Ou"], ["8573","SUJ","Susan Jia"], ["8588","JOF","Joy Fu"], ["8600","ROK","Robert Kozicki"], ["8538","ROG","Roger Underhill"], ["8005","JOG","Joe Greenwood"], ["8622","IAC","Iris Cheung"], ["8017","HAD","Hamish Dawson"], ["8371","JUF","Julian Fabian"], ["8640","PER","Penny Rhoads"], ["8641","DNE","David Neff"], ["8684","AND","Andrey Dubinsky"], ["8515","LEX","Lei Xu"], ["8403","LIV","Livia Qin"], ["8599","LYL","Lynch Lin"], ["8483","ALW","Ally Wu"], ["8182","DAT","Daisy Tian"], ["8113","KIY","King Ye"], ["8114","ZZW","Zhou Zuwen "], ["8115","ZZG","Zhang Zuguo"], ["8116","GRZ","Graybin Zhao"], ["8709","JEQ","Jessie Qiu"], ["8703","XIL","Xinyi Liang"], ["8537","LIW","Li Wei"], ["8460","SIC","Sid Chen"], ["8437","JAY","Jason Yu"], ["8576","VIC","Vivian Chen"], ["8401","TAT","Talia Tan"], ["8633","SOC","Sophia Chen"], ["8631","CHL","Chi Lian"], ["8700","KAG","Karen Gao"], ["8697","BOW","Boat Wu"], ["8699","JIL","Li Jianyao"], ["8701","VCH","Victoria Chao"], ["8698","HAZ","Harlan Zhang"], ["8702","SWO","Swing Ou"], ["8619","EDD","Edward Dawes"], ["8696","ANZ","Ann Zhang"], ["8570","LUW","Luke Walker"], ["8091","SXI","Shift Xie"], ["8531","HYM","Hyacinth Meng"], ["8657","ROC","Ross Cheetham"], ["8658","CYB","Cyril Beigbeder"], ["8056","FRD","Frank Deng"], ["8097","AMM","Amanda Mei"], ["8373","CRC","Crystal Cai"], ["8253","RWD","Richard Driscoll"], ["8426","STA","Stuart Ashmore"], ["8555","AJL","Alex Lennartz"], ["8625","AMS","Amanda Sturchio"], ["8621","KAE","Kathryn Edwards"], ["8617","RAR","Rachel Reiss"], ["8620","GRE","Greg Edwards"], ["8420","GAE","Gary Ellis"], ["8660","LIB","Lisa Bray"], ["8681","DEA","Dean Aldred"], ["8683","NIW","Nicholas Wood"], ["8664","BET","Ben Tainsh"], ["8458","JAF","James Fish"], ["8669","MAB","Matthew Bellis"], ["8572","CLX","Chris Luo"], ["8405","VIZ","Vinky Zeng"], ["8302","GED","Getty Dong"], ["8400","MOY","Molly Yu"], ["8674","BOD","Boris Denisov"], ["0396","LAT","Laura Tang"], ["8579","SDX","Shadow Xie"], ["8425","MMP","Maria Pascua"], ["8412","LIQ","Lisa Quan"], ["8578","SUS","Susie Lin"], ["8066","CHW","Charlie Wang"], ["8252","ARL","Arron Leung"], ["8068","MRD","Margaret Deng"], ["8614","FAR","Fandy Rosero"], ["8661","IND","Ines del Prado Tusell"], ["8688","CLU","Christine Luo"], ["8689","CIW","Cimin Wu"], ["8690","LEL","Lene Lin"], ["8711","JWA","Jessy Wang"], ["8712","MOU","May Ou"], ["8089","HOM","Howard Ma"], ["8668","WIZ","Wilson Zhen"], ["8608","VIM","Vim Lee"], ["8545","GAB","Gadi Burman"], ["8648","JOU","Jody Urbas"],]
+        $("#search").click(function(){
+                let input = $("#inp").val()
+				str = "NOT FOUND"
+				for (j of teacherList) {
+					if(input == j[0] || input.toUpperCase() == j[1] || input == j[2]) {
+						console.log(j)
+						str = j[0] + "  -  " + j[1] + ": "  + j[2] +"    <img src='https://icon.scie.com.cn/user/sicon/t"+j[0]+"_s.jpg' width='200'>"
+					}
+				}
+                $("#result").html(str)
+            })
+        </script>  
+ </body>
+</html>
